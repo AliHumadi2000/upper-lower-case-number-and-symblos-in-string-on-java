@@ -1,0 +1,38 @@
+import java.util.Scanner;
+class Check
+{
+public static void main(String[]args)
+	{
+	Scanner str=new Scanner(System.in);
+	String string;
+	int upper_case=0,lower_case=0,number=0,rest=0;//define varaibles to count
+	System.out.println("Enter a String: ");
+	string=str.nextLine();//taking string from the user 
+	for(int i=0;i<string.length();i++)
+		{
+		char mychar=string.charAt(i);//split string to characters at the specified index i
+		if(mychar>='A' &&mychar<='Z')
+			{
+			upper_case++;
+			}
+		else if(mychar>='a'&& mychar<='z')
+			{
+			lower_case++;
+			}
+		else if(mychar>='0' && mychar<='9')
+			{
+			number++;
+			}
+		else
+			{
+			rest++;
+			}
+		}
+	System.out.println("Number of upper case found is: "+upper_case);
+	System.out.println("Number of lower case found is: "+lower_case);
+	System.out.println("Number of unumbers found is: "+number);
+	System.out.println("Number of symbols found is: "+rest);
+	}
+}
+	
+//done by :Ali Humadi
